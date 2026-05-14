@@ -42,7 +42,7 @@ export default {
       animation: {
         'float-slow': 'float 8s ease-in-out infinite',
         'spin-slow': 'spin 22s linear infinite',
-        'marquee': 'marquee 30s linear infinite',
+        'marquee': 'marquee 100s linear infinite',
         'underline': 'underline 0.6s ease forwards',
       },
       keyframes: {

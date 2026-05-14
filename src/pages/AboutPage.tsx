@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Star } from 'lucide-react';
 import { Reveal } from '@/components/Reveal';
+import { AnimatedHeading } from '@/components/AnimatedHeading';
 import { assets } from '@/lib/assets';
+import TeamStructure from '@/sections/TeamStructure';
 
 /* ────────────────────────────── About Hero ────────────────────────────── */
 function AboutHero() {
@@ -11,12 +13,19 @@ function AboutHero() {
         <Reveal>
           <span className="eyebrow">VELVETY LLC .</span>
         </Reveal>
-        <Reveal delay={0.08}>
-          <h1 className="mt-6 font-display text-[72px] font-extrabold leading-[0.95] tracking-tightest text-wine sm:text-[88px] md:text-[110px]">
-            About
-          </h1>
-        </Reveal>
-        <div className="mt-12 h-px w-full bg-ink/10" />
+        <AnimatedHeading
+          delay={0.1}
+          className="mt-6 font-display text-[72px] font-semibold leading-[0.95] tracking-tightest text-[#050505] sm:text-[88px] md:text-[110px]"
+        >
+          About
+        </AnimatedHeading>
+        <motion.div
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-12 h-px w-full origin-left bg-ink/10"
+        />
       </div>
     </section>
   );
@@ -49,14 +58,20 @@ function AboutIntro() {
         {/* Image */}
         <Reveal y={36}>
           <div className="relative mx-auto w-full max-w-[520px]">
-            <div
+            <motion.div
               aria-hidden
-              className="paper-tile inset-0 translate-x-3 translate-y-3 rotate-[2deg] bg-cream-300"
+              initial={{ rotate: 0, opacity: 0 }}
+              whileInView={{ rotate: 2, opacity: 1 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="paper-tile inset-0 translate-x-3 translate-y-3 bg-cream-300"
             />
-            <img
+            <motion.img
               src={assets.whoWeAreImage}
               alt="Our team"
               className="relative z-10 aspect-[4/3] w-full rounded-sm object-cover shadow-card"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: 'spring', stiffness: 180, damping: 18 }}
             />
           </div>
         </Reveal>
@@ -84,7 +99,7 @@ function AboutMarquee() {
             className="inline-flex items-center text-[120px] font-extrabold leading-none tracking-tightest text-[#050505] md:text-[150px]"
           >
             {text}
-            <span className="mx-6 inline-block text-wine">—</span>
+            <span className="mx-8 inline-block align-middle" />&nbsp;
           </span>
         ))}
       </div>
@@ -96,25 +111,32 @@ function AboutMarquee() {
 function AboutStats() {
   return (
     <section className="bg-cream py-24 md:py-32">
-      <div className="container-page grid gap-16 md:grid-cols-2">
+      {/* Top two-column: title + stars | paragraph */}
+      <div className="container-page grid items-start gap-16 md:grid-cols-[0.9fr_1.1fr]">
         {/* Left column */}
         <div>
           <Reveal>
-            <div className="mb-8 h-px w-16 bg-ink/20" />
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="mb-6 h-px w-12 origin-left bg-ink/25"
+            />
           </Reveal>
           <Reveal delay={0.06}>
-            <h2 className="font-display text-[28px] font-extrabold uppercase leading-[1.25] tracking-tightest text-[#050505] sm:text-[32px]">
+            <h2 className="font-display text-[18px] font-extrabold uppercase leading-[1.35] tracking-tight text-[#050505] sm:text-[20px]">
               We&rsquo;re a creative and
               <br />
               talented team of designers
             </h2>
           </Reveal>
           <Reveal delay={0.12}>
-            <div className="mt-6 flex gap-1.5">
+            <div className="mt-4 flex gap-1">
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  size={22}
+                  size={16}
                   className="fill-wine text-wine"
                 />
               ))}
@@ -125,7 +147,7 @@ function AboutStats() {
         {/* Right column */}
         <div>
           <Reveal>
-            <p className="text-[15px] leading-[1.8] text-[#4B4B4B]">
+            <p className="text-[16px] leading-[1.8] text-[#4B4B4B]">
               Our designers all hold master&rsquo;s degrees in digital
               design-related fields and bring over a decade of combined
               industry experience. This academic foundation and hands-on
@@ -135,28 +157,44 @@ function AboutStats() {
         </div>
       </div>
 
-      {/* Big numbers */}
-      <div className="container-page mt-16 grid grid-cols-2 gap-8">
-        <Reveal>
-          <div>
-            <span className="font-display text-[72px] font-extrabold leading-none tracking-tightest text-wine sm:text-[90px] md:text-[110px]">
-              100+
-            </span>
-            <p className="mt-3 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#4B4B4B]">
-              100+ Creative &amp; Futuristic
-            </p>
-          </div>
-        </Reveal>
-        <Reveal delay={0.08}>
-          <div>
-            <span className="font-display text-[72px] font-extrabold leading-none tracking-tightest text-wine sm:text-[90px] md:text-[110px]">
-              10yr
-            </span>
-            <p className="mt-3 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#4B4B4B]">
-              Have working 10 years+
-            </p>
-          </div>
-        </Reveal>
+      {/* Big numbers — aligned with right column (paragraph) above */}
+      <div className="container-page mt-20 grid items-start gap-16 md:grid-cols-[0.9fr_1.1fr]">
+        {/* empty left spacer to match grid above */}
+        <div className="hidden md:block" />
+        <div className="flex gap-24 md:gap-32">
+          <Reveal>
+            <div>
+              <motion.span
+                className="font-display text-[64px] font-semibold leading-none tracking-tightest text-wine sm:text-[80px] md:text-[96px] inline-block"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              >
+                100+
+              </motion.span>
+              <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#4B4B4B]">
+                100+ Creative &amp; Futuristic
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <div>
+              <motion.span
+                className="font-display text-[64px] font-semibold leading-none tracking-tightest text-wine sm:text-[80px] md:text-[96px] inline-block"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.8, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+              >
+                10yr
+              </motion.span>
+              <p className="mt-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#4B4B4B]">
+                Have working 10 years+
+              </p>
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   );
@@ -238,6 +276,7 @@ export default function AboutPage() {
       <AboutIntro />
       <AboutMarquee />
       <AboutStats />
+      <TeamStructure />
       <AboutCTA />
     </>
   );

@@ -15,7 +15,8 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-white pt-28 pb-20 md:pt-36 md:pb-28"
+      className="relative overflow-hidden pt-28 pb-20 md:pt-36 md:pb-28"
+      style={{ backgroundColor: '#fffdff' }}
     >
       {/* faint ambient gradient */}
       <div
@@ -122,14 +123,26 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Hero banner gif — blends with white background, no shadows */}
+        {/* Hero banner video — blends with background via radial mask, slowed playback */}
         <div className="flex items-center justify-center md:justify-end">
-          <img
-            src={assets.homepageBannerGif}
-            alt="VelvetY banner"
-            className="w-full max-w-[480px]"
-            style={{ mixBlendMode: 'multiply' }}
-          />
+          <div className="relative w-full max-w-[560px]">
+            <video
+              ref={(el) => { if (el) el.playbackRate = 0.55; }}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full"
+              style={{
+                mixBlendMode: 'multiply',
+                WebkitMaskImage: 'radial-gradient(ellipse 70% 70% at 45% 45%, black 40%, transparent 75%)',
+                maskImage: 'radial-gradient(ellipse 70% 70% at 45% 45%, black 40%, transparent 75%)',
+              }}
+            >
+              <source src={assets.homepageBannerWebm} type="video/webm" />
+              <source src={assets.homepageBannerMp4} type="video/mp4" />
+            </video>
+          </div>
         </div>
       </div>
     </section>

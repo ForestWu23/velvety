@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowUp, Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Reveal } from '@/components/Reveal';
 import { assets } from '@/lib/assets';
@@ -12,9 +12,6 @@ const footerNav = [
 ];
 
 export default function Footer() {
-  const scrollTop = () =>
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
   return (
     <footer className="relative overflow-hidden bg-wine text-cream">
       <div className="container-page pt-16 pb-10">
@@ -23,7 +20,7 @@ export default function Footer() {
           <motion.img
             src={assets.logoSmall2}
             alt="VelvetY"
-            className="h-9 w-auto"
+            className="h-12 w-auto"
             animate={{ rotate: [0, -4, 0, 4, 0] }}
             transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
           />
@@ -115,14 +112,6 @@ export default function Footer() {
               </button>
             </form>
 
-            <button
-              type="button"
-              onClick={scrollTop}
-              aria-label="Back to top"
-              className="mt-8 grid h-12 w-12 place-items-center rounded-full bg-white text-wine shadow-soft transition-transform duration-300 hover:-translate-y-1"
-            >
-              <ArrowUp size={16} />
-            </button>
           </Reveal>
         </div>
 

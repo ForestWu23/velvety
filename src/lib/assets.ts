@@ -12,16 +12,15 @@ const url = (file: string) => `${base}/assets/images/${file}`;
 export const assets = {
   // Brand
   logoLong: url('logoLong.png'),
-  logoSmall: url('logoSmall.png'),
   logoSmall2: url('logoSmall2.png'),
 
   // Hero
-  homepageBanner: url('HomepageBanner.png'),
-  homepageBannerGif: url('homebannergif.gif'),
+  homepageBannerGif: url('homebannerslowgif.gif'),
+  homepageBannerMp4: url('homebanner.mp4'),
+  homepageBannerWebm: url('homebanner.webm'),
 
   // Who We Are
   whoWeAreImage: url('whoWeAreImage.jpg'),
-  whoWeAreBg: url('WhoWeAreBGImage.png'),
 
   // Three feature cards
   creativeAgencyImage: url('CreativeAgencyImage.png'),
@@ -54,6 +53,11 @@ export const assets = {
 
   // CTA
   brightRightImage: url('BrightRightImage.png'),
+
+  // Team
+  sihangYangPhoto: url('SihangYangPhoto2.png'),
+  yaLiPhoto: url('YaLiPhoto2.jpg'),
+  sammiTangPhoto: url('SammiTangPhoto.png'),
 } as const;
 
 export type AssetKey = keyof typeof assets;

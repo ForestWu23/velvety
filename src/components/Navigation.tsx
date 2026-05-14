@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { assets } from '@/lib/assets';
 
 const navItems = [
+  { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Services', to: '/services' },
   { label: 'Projects', to: '/projects' },
@@ -57,7 +58,7 @@ export default function Navigation() {
                 key={item.to}
                 to={item.to}
                 className={[
-                  'group relative text-[13px] font-medium transition-colors',
+                  'group relative text-[15px] font-medium transition-colors',
                   isActive ? 'text-wine font-semibold' : 'text-ink/80 hover:text-ink',
                 ].join(' ')}
               >

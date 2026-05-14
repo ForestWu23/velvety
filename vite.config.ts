@@ -2,10 +2,10 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { fileURLToPath, URL } from 'node:url';
 
-// Base path: '/' in dev (http://localhost:5173), '/velvety/' for GitHub Pages build.
-export default defineConfig(({ mode }) => ({
+// Base path: '/' — custom domain velvetydesign.com serves from root.
+export default defineConfig(() => ({
   plugins: [react()],
-  base: mode === 'development' ? '/' : '/velvety/',
+  base: '/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
