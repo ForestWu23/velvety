@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-white text-ink font-sans;
+    background-color: #ffffff;
+  }
+
+  ::selection {
+    background: #8a2e45;
+    color: #fff6f7;
+  }
+}
+
+@layer components {
+  /* Container width that mirrors the mockup's content margin */
+  .container-page {
+    @apply mx-auto w-full max-w-[1180px] px-6 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center text-[11px] font-semibold uppercase tracking-[0.28em] text-wine;
+  }
+
+  .eyebrow::before {
+    content: '';
+    @apply mr-3 inline-block h-px w-8 bg-wine/60;
+  }
+
+  .btn-wine {
+    @apply inline-flex items-center gap-2 rounded-md bg-wine px-5 py-3 text-sm font-semibold text-white transition-all duration-300 ease-out;
+    box-shadow: 0 12px 24px -12px rgba(138, 46, 69, 0.55);
+  }
+
+  .btn-wine:hover {
+    @apply bg-wine-deep;
+    transform: translateY(-1px);
+    box-shadow: 0 18px 30px -12px rgba(138, 46, 69, 0.6);
+  }
+
+  .btn-wine:active {
+    transform: translateY(0);
+  }
+
+  .display-h1 {
+    @apply font-display font-semibold leading-[1.02] tracking-tightest text-ink;
+  }
+
+  .display-h2 {
+    @apply font-display font-extrabold leading-[1.05] tracking-tightest text-ink;
+  }
+
+  .body-copy {
+    @apply text-[15px] leading-[1.7] text-muted;
+  }
+
+  /* Layered-paper decorative tile used behind images in the mockup */
+  .paper-tile {
+    @apply absolute rounded-sm bg-cream-300;
+    box-shadow: 0 30px 60px -30px rgba(138, 46, 69, 0.25);
+  }
+}
+
+@layer utilities {
+  .mask-fade-r {
+    mask-image: linear-gradient(to right, black 80%, transparent);
+    -webkit-mask-image: linear-gradient(to right, black 80%, transparent);
+  }
+
+  .mask-fade-edges {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
