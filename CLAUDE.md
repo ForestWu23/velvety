@@ -167,3 +167,4 @@ under `public/assets/` **are** committed — they ship to GitHub Pages.
 
 These will likely require introducing `react-router-dom` when the user is
 ready to move beyond the single-page homepage.
+ 
