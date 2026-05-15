@@ -67,12 +67,14 @@ const projects = [
     title: 'Buyer Folio Mobile App Design.',
     body: 'Buyer Folio is a co-ownership real estate platform that helps buyers navigate shared property ownership with clarity and confidence. We designed the buyer-side experience from research to interface, translating complex ownership models into an intuitive, decision-friendly product flow.',
     image: assets.buyerfolioImage,
+    link: '/projects/buyerfolio',
   },
   {
     tag: 'Packaging Design',
     title: 'Canature NutriBites Packaging Design.',
     body: 'For Canature NutriBites Freeze-Dried Beef Liver and Salmon Treats, Velvety Studio designed the packaging to translate product benefits into a clear, scalable visual language for both dog and cat audiences.',
     image: assets.nutriBitesImage,
+    link: '',
   },
 ];
 
@@ -125,10 +127,17 @@ function ProjectShowcase({ filter }: { filter: string }) {
                 </Reveal>
                 <Reveal delay={0.22}>
                   <div className="mt-6 flex justify-end">
-                    <span className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#050505] cursor-pointer hover:text-wine transition-colors">
-                      Read More
-                      <ArrowRight size={14} />
-                    </span>
+                    {project.link ? (
+                      <Link to={project.link} className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#050505] hover:text-wine transition-colors">
+                        Read More
+                        <ArrowRight size={14} />
+                      </Link>
+                    ) : (
+                      <span className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#050505] cursor-default">
+                        Read More
+                        <ArrowRight size={14} />
+                      </span>
+                    )}
                   </div>
                 </Reveal>
               </div>

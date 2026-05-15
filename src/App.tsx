@@ -8,6 +8,7 @@ import AboutPage from '@/pages/AboutPage';
 import ServicesPage from '@/pages/ServicesPage';
 import ProjectPage from '@/pages/ProjectPage';
 import ContactPage from '@/pages/ContactPage';
+import BuyerFolioPage from '@/pages/BuyerFolioPage';
 import { useSmoothScroll } from '@/lib/useSmoothScroll';
 
 /** Scroll to top on route change, or to hash target if present */
@@ -50,6 +51,7 @@ export default function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/projects" element={<ProjectPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/projects/buyerfolio" element={<BuyerFolioPage />} />
         </Routes>
       </main>
       <Footer />

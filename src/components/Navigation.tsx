@@ -52,7 +52,9 @@ export default function Navigation() {
 
         <nav className="hidden items-center gap-10 md:flex">
           {navItems.map((item) => {
-            const isActive = location.pathname === item.to;
+            const isActive = item.to === '/'
+              ? location.pathname === '/'
+              : location.pathname.startsWith(item.to);
             return (
               <Link
                 key={item.to}

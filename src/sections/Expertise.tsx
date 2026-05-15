@@ -88,6 +88,7 @@ export default function Expertise() {
           imageAlt="Buyer Folio mobile app screens"
           title="Buyer Folio Mobile App Design."
           body="Buyer Folio is a co-ownership real estate platform that helps buyers navigate shared property ownership with clarity and confidence. We designed the buyer-side experience from research to interface, translating complex ownership models into an intuitive, decision-friendly product flow."
+          link="/projects/buyerfolio"
           className="mt-20"
         />
 
@@ -112,9 +113,10 @@ type CaseStudyProps = {
   body: string;
   flip?: boolean;
   className?: string;
+  link?: string;
 };
 
-function CaseStudy({ image, imageAlt, title, body, flip = false, className }: CaseStudyProps) {
+function CaseStudy({ image, imageAlt, title, body, flip = false, className, link }: CaseStudyProps) {
   return (
     <div
       className={[
@@ -161,15 +163,15 @@ function CaseStudy({ image, imageAlt, title, body, flip = false, className }: Ca
           <p className="mt-5 max-w-lg body-copy">{body}</p>
         </Reveal>
         <Reveal delay={0.22}>
-          <a
-            href="#expertise"
+          <Link
+            to={link || '#'}
             className="mt-6 inline-flex items-center gap-2 text-[13px] font-semibold text-wine transition-colors hover:text-wine-deep"
           >
             Read More
             <span className="grid h-7 w-7 place-items-center rounded-full bg-wine text-white transition-transform duration-300 hover:translate-x-1">
               <ArrowRight size={12} />
             </span>
-          </a>
+          </Link>
         </Reveal>
       </div>
     </div>

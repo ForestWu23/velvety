@@ -60,6 +60,16 @@ export const assets = {
   // CTA
   brightRightImage: url('BrightRightImage.png'),
 
+  // BuyerFolio project detail
+  buyerfolioPageBanner: url('BuyerfolioPageBannerImage.png'),
+  buyerfolioPageChooseBuyerOrSeller: url('BuyerfolioPageChooseBuyerOrSellerImage.png'),
+  buyerfolioPageDashboard: url('BuyerfolioPageDashboardImage.png'),
+  buyerfolioPageDiscovery: url('BuyerfolioPageDiscoveryImage.png'),
+  buyerfolioPageDynamicOfferRoom: url('BuyerfolioPageDynamicOfferRoomImage.png'),
+  buyerfolioPageCommunicationHub: url('BuyerfolioPageCommunicationHubImage.png'),
+  buyerfolioPageAccountManagement: url('BuyerfolioPageAccountManagementImage.png'),
+  buyerfolioPageMoreProject: url('BuyerfolioPageMoreProjectIamge.png'),
+
   // Team
   sihangYangPhoto: url('SihangYangPhoto2.png'),
   yaLiPhoto: url('YaLiPhoto2.jpg'),
