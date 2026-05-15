@@ -5,7 +5,7 @@ import { Reveal } from '@/components/Reveal';
 import { assets } from '@/lib/assets';
 
 const footerNav = [
-  { label: 'Contact Us', to: '/#cta' },
+  { label: 'Contact Us', to: '/contact' },
   { label: 'About', to: '/about' },
   { label: 'Services', to: '/services' },
   { label: 'Projects', to: '/projects' },

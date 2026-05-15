@@ -86,14 +86,14 @@ function RibbonDecoration() {
 const members = [
   {
     name: 'Sihang Yang',
-    role: 'Founder & Interactive Designer',
-    bio: 'Experienced in UI/UX, branding, and digital marketing across food, real estate, and tech sectors. Holds an M.S. in Digital Communication & Media from Northeastern University.',
+    role: 'Founder & Product Design Lead',
+    bio: 'With over 10 years of experience in design and product strategy, Sihang leads VelvetY\'s creative vision across branding, digital products, and marketing. She combines deep expertise in UI/UX, visual identity, and cross-platform design to deliver cohesive experiences that drive real business impact.',
     photo: assets.sihangYangPhoto,
   },
   {
     name: 'Ya Li',
-    role: 'Managing Partner',
-    bio: 'Grounded in years of strategic advisory and industry expertise. Guides high-level growth and positioning.',
+    role: 'Founder & Marketing Manager',
+    bio: 'Seasoned professional in business management and marketing strategy, with deep expertise in Shopify store setup, optimization, and e-commerce consulting. Drives brand growth through data-informed campaigns and operational excellence.',
     photo: assets.yaLiPhoto,
   },
   {
@@ -101,6 +101,18 @@ const members = [
     role: 'Digital Media Specialist',
     bio: 'Experienced in digital experience design and digital marketing across real estate, education, fashion, non-profit, e-commerce, and broadcasting.',
     photo: assets.sammiTangPhoto,
+  },
+  {
+    name: 'Jin Xu',
+    role: 'Product & UX Designer',
+    bio: 'Focused on designing strategic digital experiences for AI SaaS, e-commerce, and mobility products. Experienced in UX research, interaction design, and design systems, combining analytical thinking with creative problem-solving to improve user decision-making and engagement.',
+    photo: assets.jinXuPhoto,
+  },
+  {
+    name: 'Forest Wu',
+    role: 'Senior Software Engineer',
+    bio: 'Former Amazon engineer with 10+ years of experience at top tech companies. Specializes in full-stack development, e-commerce platforms, and Shopify storefront engineering, delivering scalable and high-performance digital products.',
+    photo: assets.forestWuPhoto,
   },
 ];
 
@@ -149,6 +161,28 @@ export default function TeamStructure() {
             name={members[2].name}
             role={members[2].role}
             bio={members[2].bio}
+            delay={0.05}
+          />
+        </div>
+
+        {/* ── Member 04: Text left, avatar right — offset right & down ── */}
+        <div className="mt-14 md:mt-16 flex flex-col items-center gap-10 md:flex-row-reverse md:items-center md:gap-14 md:ml-auto md:max-w-[75%]">
+          <Avatar src={members[3].photo} alt={members[3].name} size={190} />
+          <MemberInfo
+            name={members[3].name}
+            role={members[3].role}
+            bio={members[3].bio}
+            delay={0.05}
+          />
+        </div>
+
+        {/* ── Member 05: Avatar left, text right — centered ── */}
+        <div className="mt-14 md:mt-16 flex flex-col items-center gap-10 md:flex-row md:items-center md:gap-14 md:mx-auto md:max-w-[75%]">
+          <Avatar src={members[4].photo} alt={members[4].name} size={200} />
+          <MemberInfo
+            name={members[4].name}
+            role={members[4].role}
+            bio={members[4].bio}
             delay={0.05}
           />
         </div>

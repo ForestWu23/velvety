@@ -5,6 +5,9 @@ import BackToTop from '@/components/BackToTop';
 import Footer from '@/sections/Footer';
 import HomePage from '@/pages/HomePage';
 import AboutPage from '@/pages/AboutPage';
+import ServicesPage from '@/pages/ServicesPage';
+import ProjectPage from '@/pages/ProjectPage';
+import ContactPage from '@/pages/ContactPage';
 import { useSmoothScroll } from '@/lib/useSmoothScroll';
 
 /** Scroll to top on route change, or to hash target if present */
@@ -20,6 +23,16 @@ function ScrollToTop() {
     }
     window.scrollTo(0, 0);
   }, [pathname, hash]);
+
+  /* Send page_view to Google Analytics on every route change */
+  useEffect(() => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('config', 'G-5FL3MVX8EZ', {
+        page_path: pathname,
+      });
+    }
+  }, [pathname]);
+
   return null;
 }
 
@@ -34,6 +47,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/projects" element={<ProjectPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </main>
       <Footer />

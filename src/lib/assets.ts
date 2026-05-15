@@ -51,13 +51,21 @@ export const assets = {
   majorPetsLogo: url('MajorPetsLogo.png'),
   homeLinkLogo: url('HomeLinkLogo.jpg'),
 
+  // Services page icons
+  servicePageBrandIdentityIcon: url('ServicePageBrandIdentityIcon.png'),
+  servicePageWebProductIcon: url('ServicePageWebProductIconImage.png'),
+  servicePagePackagingIcon: url('ServicePagePackagingIconImage.png'),
+  servicePageSocialIcon: url('ServicePageSocialIconImage.png'),
+
   // CTA
   brightRightImage: url('BrightRightImage.png'),
 
   // Team
   sihangYangPhoto: url('SihangYangPhoto2.png'),
   yaLiPhoto: url('YaLiPhoto2.jpg'),
-  sammiTangPhoto: url('SammiTangPhoto.png'),
+  sammiTangPhoto: url('SammiTangPhoto2.png'),
+  jinXuPhoto: url('JinXuPhoto.jpg'),
+  forestWuPhoto: url('ForestWuPhoto.png'),
 } as const;
 
 export type AssetKey = keyof typeof assets;

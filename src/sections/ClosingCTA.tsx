@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Reveal } from '@/components/Reveal';
 import { assets } from '@/lib/assets';
 
@@ -36,13 +37,13 @@ export default function ClosingCTA() {
             </p>
           </Reveal>
           <Reveal delay={0.26}>
-            <a href="mailto:info@velvetydesign.com" className="btn-wine mt-8 group">
+            <Link to="/contact" className="btn-wine mt-8 group">
               Book a Free Consultation
               <ArrowRight
                 size={14}
                 className="transition-transform duration-300 group-hover:translate-x-1"
               />
-            </a>
+            </Link>
           </Reveal>
         </div>
 

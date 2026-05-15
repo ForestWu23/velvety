@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { assets } from '@/lib/assets';
 
 const VP = { once: false, margin: '-60px' } as const;
@@ -113,19 +114,25 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 2.55, ease: [0.22, 1, 0.36, 1] }}
             className="mt-8"
           >
-            <a href="#cta" className="btn-wine group">
+            <Link to="/contact" className="btn-wine group">
               Schedule a FREE Consultation
               <ArrowRight
                 size={16}
                 className="transition-transform duration-300 group-hover:translate-x-1"
               />
-            </a>
+            </Link>
           </motion.div>
         </div>
 
         {/* Hero banner video — blends with background via radial mask, slowed playback */}
         <div className="flex items-center justify-center md:justify-end">
-          <div className="relative w-full max-w-[560px]">
+          <motion.div
+            className="relative w-full max-w-[560px]"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={VP}
+            transition={{ duration: 1, delay: 2.5, ease: [0.22, 1, 0.36, 1] }}
+          >
             <video
               ref={(el) => { if (el) el.playbackRate = 0.55; }}
               autoPlay
@@ -142,7 +149,7 @@ export default function Hero() {
               <source src={assets.homepageBannerWebm} type="video/webm" />
               <source src={assets.homepageBannerMp4} type="video/mp4" />
             </video>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

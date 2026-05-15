@@ -74,7 +74,7 @@ export default function Navigation() {
           })}
         </nav>
 
-        <Link to="/#cta" className="btn-wine !py-2 !px-4 text-[12px]">
+        <Link to="/contact" className="btn-wine !py-2 !px-4 text-[12px]">
           Contact Us
         </Link>
       </div>
