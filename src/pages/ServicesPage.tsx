@@ -91,7 +91,16 @@ function ServiceOfferings() {
                     className="h-[52px] w-[52px] object-contain"
                   />
                 ) : (
-                  <ShoppingBag size={52} strokeWidth={1.2} className="text-[#050505]" />
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    whileInView={{ y: [20, -18, 4, -8, 2, 0], opacity: 1 }}
+                    viewport={{ once: false, margin: '-60px' }}
+                    transition={{ duration: 1, delay: 0.1, ease: 'easeOut' }}
+                    whileHover={{ y: [0, -22, 6, -10, 3, 0], transition: { duration: 0.7 } }}
+                    className="inline-block"
+                  >
+                    <ShoppingBag size={52} strokeWidth={1.2} className="text-[#050505]" />
+                  </motion.div>
                 )}
                 {/* Title */}
                 <h3 className="mt-6 whitespace-pre-line font-display text-[17px] font-extrabold leading-[1.35] tracking-tight text-[#050505]">
