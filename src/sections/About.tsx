@@ -10,10 +10,14 @@ const TILE    = '#C9A0A8';   // deeper mauve rectangle (overlaps edges)
 
 export default function About() {
   return (
-    <section
+    <motion.section
       id="about"
       className="relative overflow-hidden py-24 md:py-28"
       style={{ backgroundColor: BG }}
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, margin: '-40px' }}
+      transition={{ duration: 1.2, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
     >
       {/* ── Large tilted background rectangle ── */}
       <motion.div
@@ -96,6 +100,6 @@ export default function About() {
           </div>
         </Reveal>
       </div>
-    </section>
+    </motion.section>
   );
 }

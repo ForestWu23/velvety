@@ -79,7 +79,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={VP}
-                transition={{ duration: 0.5, delay: 1.6 + i * 0.13, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.5, delay: 0.8 + i * 0.13, ease: [0.22, 1, 0.36, 1] }}
               >
                 {word}
               </motion.span>
@@ -90,7 +90,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VP}
-            transition={{ duration: 0.7, delay: 2.55, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, delay: 1.5, ease: [0.22, 1, 0.36, 1] }}
             className="mt-4 font-script text-[24px] text-wine md:text-[26px]"
           >
             Designing what matters...
@@ -100,7 +100,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VP}
-            transition={{ duration: 0.7, delay: 2.55, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, delay: 1.5, ease: [0.22, 1, 0.36, 1] }}
             className="mt-6 max-w-md body-copy"
           >
             Empowering brands through intuitive design, strategic storytelling,
@@ -111,7 +111,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VP}
-            transition={{ duration: 0.7, delay: 2.55, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, delay: 1.5, ease: [0.22, 1, 0.36, 1] }}
             className="mt-8"
           >
             <Link to="/contact" className="btn-wine group">
@@ -128,10 +128,10 @@ export default function Hero() {
         <div className="flex items-center justify-center md:justify-end">
           <motion.div
             className="relative w-full max-w-[560px]"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, x: 120 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={VP}
-            transition={{ duration: 1, delay: 2.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.2, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <video
               ref={(el) => { if (el) el.playbackRate = 0.55; }}
