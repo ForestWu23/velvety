@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone, Clock, ArrowRight } from 'lucide-react';
+import { Mail, Phone, Clock, ArrowRight } from 'lucide-react';
 import { Reveal } from '@/components/Reveal';
 import { AnimatedHeading } from '@/components/AnimatedHeading';
 
