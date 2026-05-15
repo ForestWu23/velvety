@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Reveal } from '@/components/Reveal';
 import { AnimatedHeading } from '@/components/AnimatedHeading';
 import { assets } from '@/lib/assets';
@@ -69,13 +70,13 @@ export default function Expertise() {
               </p>
             </Reveal>
             <Reveal delay={0.28}>
-              <a href="#expertise" className="btn-wine mt-5 group">
+              <Link to="/projects" className="btn-wine mt-5 group">
                 Explore All Project
                 <ArrowRight
                   size={14}
                   className="transition-transform duration-300 group-hover:translate-x-1"
                 />
-              </a>
+              </Link>
             </Reveal>
           </div>
         </div>

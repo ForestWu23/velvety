@@ -117,28 +117,8 @@ function GetInTouch() {
             </a>
           </Reveal>
 
-          {/* Address */}
-          <Reveal delay={0.2}>
-            <div className="flex items-start gap-5 rounded-lg border border-[#E7D4D8] bg-white p-6">
-              <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-wine/10">
-                <MapPin size={20} className="text-wine" />
-              </div>
-              <div>
-                <p className="text-[13px] font-semibold uppercase tracking-[0.15em] text-[#4B4B4B]">
-                  Office
-                </p>
-                <p className="mt-1 text-[17px] font-bold text-[#050505]">
-                  Mill Creek, WA
-                </p>
-                <p className="mt-1 text-[13px] text-[#4B4B4B]">
-                  15634 27th Dr SE, Mill Creek, WA 98012
-                </p>
-              </div>
-            </div>
-          </Reveal>
-
           {/* Hours */}
-          <Reveal delay={0.26}>
+          <Reveal delay={0.2}>
             <div className="flex items-start gap-5 rounded-lg border border-[#E7D4D8] bg-white p-6">
               <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-wine/10">
                 <Clock size={20} className="text-wine" />
