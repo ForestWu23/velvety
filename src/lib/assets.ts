@@ -42,8 +42,8 @@ export const assets = {
   nutriBitesImage: url('NutriBitesImage.png'),
 
   // Testimonials
-  clientCommentImage1: url('ClientCommentImage1.png'),
-  clientCommentImage2: url('ClientCommentImage2.png'),
+  clientCommentImage1: url('ClientCommentImage102.png'),
+  clientCommentImage2: url('ClientCommentImage202.png'),
 
   // Clients strip
   thriveLogo: url('ThriveLogo.png'),
@@ -76,6 +76,7 @@ export const assets = {
   sammiTangPhoto: url('SammiTangPhoto2.png'),
   jinXuPhoto: url('JinXuPhoto.jpg'),
   forestWuPhoto: url('ForestWuPhoto.png'),
+  leslieChenPhoto: url('LeslieChenPhoto.png'),
 } as const;
 
 export type AssetKey = keyof typeof assets;

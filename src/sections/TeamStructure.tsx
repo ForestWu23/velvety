@@ -85,16 +85,16 @@ function RibbonDecoration() {
 /* ── Team members data ── */
 const members = [
   {
-    name: 'Sihang Yang',
-    role: 'Founder & Product Design Lead',
-    bio: 'With over 10 years of experience in design and product strategy, Sihang leads VelvetY\'s creative vision across branding, digital products, and marketing. She combines deep expertise in UI/UX, visual identity, and cross-platform design to deliver cohesive experiences that drive real business impact.',
-    photo: assets.sihangYangPhoto,
-  },
-  {
     name: 'Ya Li',
     role: 'Founder & Marketing Manager',
     bio: 'Seasoned professional in business management and marketing strategy, with deep expertise in Shopify store setup, optimization, and e-commerce consulting. Drives brand growth through data-informed campaigns and operational excellence.',
     photo: assets.yaLiPhoto,
+  },
+  {
+    name: 'Sihang Yang',
+    role: 'Product Design Lead',
+    bio: '9 years of experience in design and product strategy, Sihang leads VelvetY\'s creative vision across branding, digital products, and marketing. She combines deep expertise in UI/UX, visual identity, and cross-platform design to deliver cohesive experiences that drive real business impact.',
+    photo: assets.sihangYangPhoto,
   },
   {
     name: 'Sammi Tang',
@@ -113,6 +113,12 @@ const members = [
     role: 'Senior Software Engineer',
     bio: 'Former Amazon engineer with 10+ years of experience at top tech companies. Specializes in full-stack development, e-commerce platforms, and Shopify storefront engineering, delivering scalable and high-performance digital products.',
     photo: assets.forestWuPhoto,
+  },
+  {
+    name: 'Leslie Chen',
+    role: 'Senior Software Engineer',
+    bio: 'Former Googler and eBay engineer with 8 years of full-stack development experience. Brings deep technical expertise across front-end and back-end systems, delivering scalable and reliable digital products.',
+    photo: assets.leslieChenPhoto,
   },
 ];
 
@@ -183,6 +189,17 @@ export default function TeamStructure() {
             name={members[4].name}
             role={members[4].role}
             bio={members[4].bio}
+            delay={0.05}
+          />
+        </div>
+
+        {/* ── Member 06: Text left, avatar right ── */}
+        <div className="mt-14 md:mt-16 flex flex-col items-center gap-10 md:flex-row-reverse md:items-center md:gap-14 md:ml-auto md:max-w-[75%]">
+          <Avatar src={members[5].photo} alt={members[5].name} size={190} />
+          <MemberInfo
+            name={members[5].name}
+            role={members[5].role}
+            bio={members[5].bio}
             delay={0.05}
           />
         </div>
