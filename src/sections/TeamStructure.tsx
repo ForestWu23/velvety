@@ -110,14 +110,14 @@ const members = [
   },
   {
     name: 'Forest Wu',
-    role: 'Senior Software Engineer',
-    bio: 'Former Amazon engineer with 10+ years of experience at top tech companies. Specializes in full-stack development, e-commerce platforms, and Shopify storefront engineering, delivering scalable and high-performance digital products.',
+    role: 'Technical Advisor',
+    bio: 'Amazon software engineer with 11 years of experience at top tech companies. Specializes in full-stack development, e-commerce platforms, and Shopify storefront engineering, delivering scalable and high-performance digital products.',
     photo: assets.forestWuPhoto,
   },
   {
     name: 'Leslie Chen',
-    role: 'Senior Software Engineer',
-    bio: 'Former Googler and eBay engineer with 8 years of full-stack development experience. Brings deep technical expertise across front-end and back-end systems, delivering scalable and reliable digital products.',
+    role: 'External Development Partner',
+    bio: 'Googler software engineer with 8 years of full-stack development experience. Brings deep technical expertise across front-end and back-end systems, delivering scalable and reliable digital products.',
     photo: assets.leslieChenPhoto,
   },
 ];
