@@ -50,7 +50,7 @@ export default function Footer() {
               <ul className="mt-8 space-y-3 text-[13px] text-cream/85">
                 <li className="flex items-center gap-3">
                   <MapPin size={14} />
-                  <span>1563427th Dr SE, Mill Creek, WA 98012</span>
+                  <span>2203B 22nd AVE S, Seattle, WA 98144</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail size={14} />
