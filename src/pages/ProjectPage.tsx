@@ -33,7 +33,7 @@ function ProjectHero() {
 }
 
 /* ────────────────────────── Filter Tabs ────────────────────────── */
-const filters = ['All', 'App Design', 'Packaging Design'] as const;
+const filters = ['All', 'App Design', 'Packaging Design', 'Web Design'] as const;
 
 function FilterTabs({
   active,
@@ -74,6 +74,13 @@ const projects = [
     title: 'Canature NutriBites Packaging Design.',
     body: 'For Canature NutriBites Freeze-Dried Beef Liver and Salmon Treats, Velvety Studio designed the packaging to translate product benefits into a clear, scalable visual language for both dog and cat audiences.',
     image: assets.nutriBitesImage,
+    link: '',
+  },
+  {
+    tag: 'Web Design',
+    title: 'Huagen Culture Center Website Development.',
+    body: 'Huagen Culture Center is a community-focused nonprofit website designed to connect, support, and empower Chinese communities in the U.S. The design uses a warm red-and-gold visual language, community photography, and clear bilingual navigation to create a welcoming digital home for events, services, donations, and cultural connections.',
+    image: assets.coverpageHuagen,
     link: '',
   },
 ];

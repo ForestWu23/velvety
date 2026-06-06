@@ -40,6 +40,7 @@ export const assets = {
   // Case studies
   buyerfolioImage: url('BuyerfolioImage.png'),
   nutriBitesImage: url('NutriBitesImage.png'),
+  coverpageHuagen: url('coverpageHuagen2.png'),
 
   // Testimonials
   clientCommentImage1: url('ClientCommentImage102.png'),
