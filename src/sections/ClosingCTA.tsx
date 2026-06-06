@@ -10,7 +10,7 @@ export default function ClosingCTA() {
       <div className="container-page grid items-center gap-12 md:grid-cols-[1.05fr_0.95fr]">
         <div>
           <Reveal>
-            <span className="eyebrow">Project</span>
+            <span className="eyebrow">Bright</span>
           </Reveal>
           <Reveal delay={0.08}>
             <h2 className="display-h2 mt-4 text-[40px] sm:text-[48px] md:text-[56px]">
